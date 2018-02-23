@@ -2,18 +2,7 @@
 
 #Setup Kubernetes Firewall
 ufw allow 22
-ufw allow 6433
-ufw allow 2379
-ufw allow 2380
-ufw allow 10250
-ufw allow 10251
-ufw allow 10252
-ufw allow 10255
-
-
-#Etcd Ports
-ufw allow 8285
-ufw allow 8472
+ufw allow 6443
 
 #Start Firewall
 ufw enable
@@ -24,6 +13,8 @@ apt -y dist-upgrade
 
 #Apt
 apt -y install docker.io
+
+swapoff -a
 
 #Install Kubernetes
 apt-get update && apt-get install -y apt-transport-https

@@ -2,13 +2,6 @@
 
 #Setup Firewall
 ufw allow 22
-ufw allow 10250
-ufw allow 10255
-ufw allow 30000:32767
-
-#Setup Etcd
-ufw allow 8285
-ufw allow 8472
 
 #Start Firewall
 ufw enable
