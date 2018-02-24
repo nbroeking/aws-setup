@@ -8,7 +8,6 @@ ufw enable
 
 #Upgrade System
 apt update
-apt -y dist-upgrade
 
 #Apt
 apt -y install docker.io
