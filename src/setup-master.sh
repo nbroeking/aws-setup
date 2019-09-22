@@ -28,6 +28,17 @@ sudo add-apt-repository \
    
 sudo apt-get install docker-ce
 
+cat > /etc/docker/daemon.json <<EOF
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2"
+}
+EOF
+
 sudo apt-get update
 
 #Kill Swap
